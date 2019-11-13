@@ -16,7 +16,7 @@ npm i
 ````
 ### Run on local server
 ```
-npm start
+expo start
 ```
 ### Access
 * host: `127.0.0.1`
