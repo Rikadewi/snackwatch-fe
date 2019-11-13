@@ -15,25 +15,14 @@ export default class Home extends React.Component {
 }
 
 const styles = StyleSheet.create({
-
     MainContainer: {
-
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#f5fcff',
+        backgroundColor: '#efefef',
         padding: 11
 
     },
-
-    button: {
-        alignItems: 'center',
-        backgroundColor: '#43A047',
-        padding: 12,
-        width: 280,
-        marginTop: 12,
-    },
-
     text: {
 
         color: '#fff'

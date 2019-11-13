@@ -8,6 +8,7 @@ import Home from './src/containers/home';
 import Shop from './src/containers/shop';
 import Camera from './src/containers/camera';
 import './src/static/css/style.css';
+import { CameraButton } from './src/components/camera-button';
 
 const HomeTab = createStackNavigator(
     {
@@ -57,11 +58,7 @@ const MainApp = createBottomTabNavigator(
                 }
                 if (routeName === 'Camera') {
                     return (
-                        <Icon
-                            name='camera'
-                            type='font-awesome'
-                            color={tintColor}
-                            size={24} />
+                        <CameraButton />
                     );
                 }
 
@@ -80,6 +77,7 @@ const MainApp = createBottomTabNavigator(
             inactiveTintColor: '#7b7b7b',
             style: {
                 borderColor: 'transparent',
+                height: 56,
             }
         },
     }
