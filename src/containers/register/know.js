@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image, StyleSheet } from 'react-native';
+import { TextInput, Text, View, Image, StyleSheet } from 'react-native';
 import { styles } from '../../styles/styles'
 import { H6, GREEN, GRAY, DARK_GRAY, BLACK } from '../../styles/const';
 
@@ -56,25 +56,54 @@ export default class Know extends Component {
                         }}
                     />
                 </View>
+                <BoxNumberInput metric='Age' unit="Year's Old" placeholder='18' />
+                <BoxNumberInput metric='Weight' unit='Kilogram' placeholder='50' />
+            </View>
+        );
+    }
+}
+
+class BoxNumberInput extends Component {
+    render() {
+        return (
+            <View style={{ marginBottom: 30 }}>
                 <Text style={{
                     color: BLACK,
                     margin: 11,
                     fontWeight: 'bold',
-                }}>Your Age</Text>
+                    textAlign: 'center',
+                }}>Your {this.props.metric}</Text>
                 <View style={{
                     display: 'flex',
                     flexDirection: 'row',
+                    alignItems: 'center',
                 }}>
+                    <TextInput
+                        keyboardType='numeric'
+                        placeholder={this.props.placeholder}
+                        style={{
+                            width: 69,
+                            paddingVertical: 7,
+                            textAlign: 'center',
+                            backgroundColor: '#ffffff',
+                            marginRight: 8,
+                            shadowColor: "#000",
+                            shadowOffset: {
+                                width: 0,
+                                height: 2,
+                            },
+                            shadowOpacity: 0.25,
+                            shadowRadius: 3.84,
+                            elevation: 5,
+                            borderRadius: 5,
+                            color: DARK_GRAY,
+                        }}
+                    />
                     <Text style={{
                         color: DARK_GRAY,
                         fontSize: H6,
-                    }}>Years's Old</Text>
+                    }}>{this.props.unit}</Text>
                 </View>
-                <Text style={{
-                    color: BLACK,
-                    margin: 11,
-                    fontWeight: 'bold',
-                }}>Your Weight</Text>
             </View>
         );
     }

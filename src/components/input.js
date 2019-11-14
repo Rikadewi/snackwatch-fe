@@ -5,6 +5,29 @@ import { Icon } from 'react-native-elements'
 
 export default class Input extends Component {
     render() {
+        let input;
+        if (this.props.placeholder == 'Password') {
+            input = <TextInput
+                secureTextEntry={true}
+                style={{
+                    marginLeft: 5,
+                    color: DARK_GRAY,
+                    borderColor: 'transparent',
+                }}
+                placeholder={this.props.placeholder}
+                onChangeText={(text) => this.props.handler(text)}
+            />
+        } else {
+            input = <TextInput
+                style={{
+                    marginLeft: 5,
+                    color: DARK_GRAY,
+                    borderColor: 'transparent',
+                }}
+                placeholder={this.props.placeholder}
+                onChangeText={(text) => this.props.handler(text)}
+            />
+        }
         return (
             <View style={{
                 backgroundColor: LIGHT_GRAY,
@@ -22,15 +45,7 @@ export default class Input extends Component {
                     type='feather'
                     color={DARK_GRAY}
                     size={20} />
-                <TextInput
-                    style={{
-                        marginLeft: 5,
-                        color: DARK_GRAY,
-                        borderColor: 'transparent',
-                    }}
-                    placeholder={this.props.placeholder}
-                    onChangeText={(text) => this.props.handler(text)}
-                />
+                {input}
             </View>
         );
     }
