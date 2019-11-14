@@ -6,6 +6,7 @@ import { Button } from 'react-native-elements';
 import { COLOR_PRIMARY, COLOR_SECONDARY, H1 } from '../styles/const'
 import { Input } from '../components/input';
 import { Logo } from '../components/logo';
+import { BlueButton } from '../components/blue-button'
 
 class Login extends Component {
     constructor(props) {
@@ -17,6 +18,7 @@ class Login extends Component {
 
         this.handleChangeUsername = this.handleChangeUsername.bind(this);
         this.handleChangePassword = this.handleChangePassword.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     isFormValid = () => {
@@ -87,10 +89,9 @@ class Login extends Component {
                     placeholder="Password"
                     iconName="lock"
                 />
-
-                <Button
+                <BlueButton
                     onPress={this.handleSubmit}
-                    title="Login"
+                    text="Login"
                 />
             </View>
         );
