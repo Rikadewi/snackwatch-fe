@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from "redux";
-import auth from "./reducers/auth";
+import rootReducer from "./reducers/index";
 import thunk from 'redux-thunk';
 import { persistStore, persistReducer } from 'redux-persist';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
@@ -10,7 +10,7 @@ const persistConfig = {
     storage,
     stateReconciler: autoMergeLevel2,
 };
-const persistedReducer = persistReducer(persistConfig, auth);
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = createStore(
     persistedReducer,

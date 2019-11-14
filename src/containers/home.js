@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => ({
-    username: state.username,
+    username: state.auth.username,
 });
 
 const mapDispatchToProps = dispatch => ({

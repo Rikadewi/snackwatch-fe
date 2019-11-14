@@ -14,7 +14,7 @@ class Route extends Component {
 }
 
 const mapStateToProps = state => ({
-    isAuthenticated: state.isAuthenticated,
+    isAuthenticated: state.auth.isAuthenticated,
 });
 
 export default connect(

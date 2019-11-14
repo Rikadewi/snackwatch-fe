@@ -6,8 +6,8 @@ import Know from './register/know';
 
 const UserNavigator = createStackNavigator(
     {
-        Know: { screen: Know },
         Hello: { screen: Hello },
+        Know: { screen: Know },
         Login: { screen: Login },
     },
     {

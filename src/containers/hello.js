@@ -33,7 +33,7 @@ export default class Hello extends Component {
 
                 <BlueButton
                     onPress={() => this.props.navigation.navigate('Know')}
-                    text="Login"
+                    text="Get Started"
                 />
                 <View style={{
                     display: 'flex',

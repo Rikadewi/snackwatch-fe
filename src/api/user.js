@@ -10,3 +10,10 @@ export const logoutApi = (username) => {
         username: username,
     };
 };
+
+export const addMetricApi = (weight, height) => {
+    return {
+        weight: weight,
+        height: height,
+    };
+};
