@@ -4,7 +4,7 @@ import { Button } from 'react-native-elements';
 import { COLOR_PRIMARY, WIDE_BUTTON } from '../styles/const';
 import { BorderlessButton } from 'react-native-gesture-handler';
 
-class BlueButton extends Component {
+export default class BlueButton extends Component {
     render() {
         return (
             <TouchableOpacity
@@ -28,4 +28,4 @@ class BlueButton extends Component {
             </TouchableOpacity>
         );
     }
-} export { BlueButton };
+} 

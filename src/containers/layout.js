@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 import Home from './home';
 import Shop from './shop';
 import Camera from './camera';
-import { CameraButton } from '../components/camera-button';
+import CameraButton from '../components/camera-button';
 
 const HomeTab = createStackNavigator(
     {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View } from "react-native";
 import { Icon } from 'react-native-elements'
 
-class CameraButton extends Component {
+export default class CameraButton extends Component {
     render() {
         return (
             <View style={{
@@ -30,4 +30,4 @@ class CameraButton extends Component {
             </View>
         );
     }
-} export { CameraButton };
+};

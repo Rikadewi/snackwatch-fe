@@ -3,7 +3,7 @@ import { View, TextInput } from 'react-native';
 import { DARK_GRAY, LIGHT_GRAY, WIDE_BUTTON } from '../styles/const'
 import { Icon } from 'react-native-elements'
 
-class Input extends Component {
+export default class Input extends Component {
     render() {
         return (
             <View style={{
@@ -34,4 +34,4 @@ class Input extends Component {
             </View>
         );
     }
-} export { Input };
+};

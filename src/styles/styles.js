@@ -3,10 +3,9 @@ import { BACKGROUND } from './const'
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         backgroundColor: BACKGROUND,
         padding: 11
-
     },
 });

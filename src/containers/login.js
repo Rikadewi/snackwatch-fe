@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import { login } from "../actions/auth";
 import { Text, View, Image } from 'react-native';
 import { Button } from 'react-native-elements';
-import { COLOR_PRIMARY, COLOR_SECONDARY, H1 } from '../styles/const'
-import { Input } from '../components/input';
-import { Logo } from '../components/logo';
-import { BlueButton } from '../components/blue-button'
+import { COLOR_PRIMARY, COLOR_SECONDARY, H2 } from '../styles/const'
+import Input from '../components/input';
+import Logo from '../components/logo';
+import BlueButton from '../components/blue-button'
 
 class Login extends Component {
     constructor(props) {
@@ -69,12 +69,12 @@ class Login extends Component {
                 }}>
                     <Text style={{
                         color: COLOR_PRIMARY,
-                        fontSize: H1,
+                        fontSize: H2,
                     }}>
                         Snack</Text>
                     <Text style={{
                         color: COLOR_SECONDARY,
-                        fontSize: H1,
+                        fontSize: H2,
                     }}>
                         Watch</Text>
                 </View>
