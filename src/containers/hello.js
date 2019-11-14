@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, Image } from 'react-native';
 import { styles } from '../styles/styles'
-import { H1, COLOR_PRIMARY, DARK_GRAY } from '../styles/const';
+import { H6, COLOR_PRIMARY, DARK_GRAY } from '../styles/const';
 import Logo from '../components/logo';
 import BlueButton from '../components/blue-button';
 
@@ -13,11 +13,7 @@ export default class Hello extends Component {
         return (
             <View style={styles.container} >
                 <Logo size={50} />
-                <Text style={{
-                    fontSize: H1,
-                    color: COLOR_PRIMARY,
-                    fontWeight: 'bold',
-                }}>Hello</Text>
+                <Text style={styles.h1}>Hello</Text>
 
                 <View style={{
                     display: 'flex',
@@ -36,7 +32,7 @@ export default class Hello extends Component {
                 />
 
                 <BlueButton
-                    onPress={() => this.props.navigation.navigate('Login')}
+                    onPress={() => this.props.navigation.navigate('Know')}
                     text="Login"
                 />
                 <View style={{
@@ -46,14 +42,14 @@ export default class Hello extends Component {
                 }}>
                     <Text style={{
                         color: DARK_GRAY,
-                        fontSize: 12,
+                        fontSize: H6,
                     }}>Already have account? </Text>
                     <Text
                         onPress={() => this.props.navigation.navigate('Login')}
                         style={{
                             fontWeight: 'bold',
                             color: COLOR_PRIMARY,
-                            fontSize: 12,
+                            fontSize: H6,
                         }}
                     >Sign in</Text>
 
