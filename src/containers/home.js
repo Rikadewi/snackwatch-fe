@@ -1,14 +1,24 @@
-import React from 'react';
-import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
+import React, { Component } from 'react';
+import { connect } from "react-redux";
+import { Text, View, StyleSheet } from 'react-native';
+import { Button } from 'react-native-elements';
+import { logout } from "../actions/auth";
 
-export default class Home extends React.Component {
+class Home extends Component {
 
     render() {
+        const {
+            username,
+            handleLogout,
+        } = this.props;
+
         return (
             <View style={styles.MainContainer}>
-
-                <Text>Hi</Text>
-
+                <Text>Welcome {username}</Text>
+                <Button
+                    onPress={handleLogout}
+                    title="Logout"
+                />
             </View>
         );
     }
@@ -27,5 +37,19 @@ const styles = StyleSheet.create({
 
         color: '#fff'
     }
-
 });
+
+const mapStateToProps = state => ({
+    username: state.username,
+});
+
+const mapDispatchToProps = dispatch => ({
+    handleLogout: (noRekening) => {
+        dispatch(logout(noRekening));
+    },
+});
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(Home);
