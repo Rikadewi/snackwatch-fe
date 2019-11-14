@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { login } from "../actions/auth";
-import { Text, View, TextInput } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import { Button } from 'react-native-elements';
+import { COLOR_PRIMARY, COLOR_SECONDARY, H1 } from '../styles/const'
+import { Input } from '../components/input';
+import { Logo } from '../components/logo';
 
 class Login extends Component {
     constructor(props) {
@@ -11,6 +14,9 @@ class Login extends Component {
             username: '',
             password: '',
         };
+
+        this.handleChangeUsername = this.handleChangeUsername.bind(this);
+        this.handleChangePassword = this.handleChangePassword.bind(this);
     }
 
     isFormValid = () => {
@@ -30,18 +36,58 @@ class Login extends Component {
         }
     };
 
+    handleChangeUsername = (text) => {
+        this.setState({ username: text });
+    }
+
+    handleChangePassword = (text) => {
+        this.setState({ password: text });
+    }
+
     render() {
         return (
-            <View>
-                <Text>Login</Text>
-                <TextInput
+            <View style={{
+                flex: 1,
+                alignItems: 'center',
+            }}>
+                <Image
+                    source={require('../static/background/header-login.png')}
+                    style={{
+                        width: '100vw',
+                        height: '42vw',
+                    }}
+                />
+
+                <Logo size={100} />
+
+                <View style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    marginBottom: 20,
+                }}>
+                    <Text style={{
+                        color: COLOR_PRIMARY,
+                        fontSize: H1,
+                    }}>
+                        Snack</Text>
+                    <Text style={{
+                        color: COLOR_SECONDARY,
+                        fontSize: H1,
+                    }}>
+                        Watch</Text>
+                </View>
+
+                <Input
+                    handler={this.handleChangeUsername.bind(this)}
                     placeholder="Username"
-                    onChangeText={text => this.setState({ username: text })}
+                    iconName="user"
                 />
-                <TextInput
+                <Input
+                    handler={this.handleChangePassword.bind(this)}
                     placeholder="Password"
-                    onChangeText={text => this.setState({ password: text })}
+                    iconName="lock"
                 />
+
                 <Button
                     onPress={this.handleSubmit}
                     title="Login"
