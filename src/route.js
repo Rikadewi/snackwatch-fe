@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-import Login from './containers/login'
+import UserNavigator from './containers/user-navigator'
 import Layout from './containers/layout';
 
 class Route extends Component {
@@ -9,7 +9,7 @@ class Route extends Component {
             isAuthenticated,
         } = this.props;
 
-        return !(isAuthenticated) ? <Login /> : <Layout />;
+        return !(isAuthenticated) ? <UserNavigator /> : <Layout />;
     }
 }
 
