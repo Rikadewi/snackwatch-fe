@@ -1,23 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { connect } from "react-redux";
-import UserNavigator from './containers/user-navigator'
-import Layout from './containers/layout';
+import UserNavigator from "./containers/user-navigator";
+import Layout from "./containers/layout";
+import Login from "./containers/login";
 
 class Route extends Component {
-    render() {
-        const {
-            isAuthenticated,
-        } = this.props;
+	render() {
+		const { isAuthenticated } = this.props;
 
-        return !(isAuthenticated) ? <UserNavigator /> : <Layout />;
-    }
+		// return !isAuthenticated ? <Login /> : <Layout />;
+		return <Layout />;
+	}
 }
 
 const mapStateToProps = state => ({
-    isAuthenticated: state.auth.isAuthenticated,
+	isAuthenticated: state.auth.isAuthenticated
 });
 
-export default connect(
-    mapStateToProps,
-    null,
-)(Route);
+export default connect(mapStateToProps, null)(Route);
