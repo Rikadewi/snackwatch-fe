@@ -6,6 +6,11 @@ import { H6, GREEN, GRAY, DARK_GRAY, BLACK } from '../../styles/const';
 export default class Know extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            gender: '',
+            weight: 0,
+            height: 0,
+        }
     }
     render() {
         return (
