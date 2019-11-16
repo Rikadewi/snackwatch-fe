@@ -4,7 +4,6 @@ import { addMetric } from "../../actions/user";
 import { TextInput, Text, View, Image, ScrollView, SafeAreaView, TouchableHighlight } from 'react-native';
 import { styles } from '../../styles/styles'
 import { H6, DARK_GRAY, BLACK } from '../../styles/const';
-import { WOMAN, MAN } from '../../util/const'
 import RegisterBar from '../../components/register-bar';
 
 class Know extends Component {
