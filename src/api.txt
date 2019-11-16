@@ -1,0 +1,38 @@
+{
+"image" : img,
+"info" : {
+"weight" : 60,
+"age" : 0 pria// 1 wanita,
+"allergy" : [1,2,3],
+"illness" : [0-6]
+}
+}
+
+{
+"info" : tetap,
+"day" : 0,
+"items" : [
+"sodium ": 12,
+"sugar":,
+"carbo":
+]
+}
+
+{
+verdict : 1 //not health , 2// med , 3 //health, 4 //prohibited,
+items : [
+"sodium" : {
+"amount" : xx,
+"status" : 1 below, 2 normal, 3 high
+}
+],
+}
+
+{
+verdict : 1//2//3,
+items : [
+"sodium" : {
+"amount" : persen,
+}
+]
+}
