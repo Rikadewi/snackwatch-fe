@@ -4,16 +4,22 @@ import { GREEN, GRAY } from '../styles/const';
 
 export default class RegisterBar extends Component {
     render() {
+        let bars = [];
+        let i = 0;
+        for (i; i < this.props.count; i++) {
+            bars.push(<View style={[style.bar, style.current]} />);
+        }
+
+        for (i; i < 4; i++) {
+            bars.push(<View style={style.bar} />);
+        }
         return (
             <View style={{
                 display: 'flex',
                 flexDirection: 'row',
                 marginBottom: 32,
             }}>
-                <View style={[style.bar, style.current]} />
-                <View style={style.bar} />
-                <View style={style.bar} />
-                <View style={style.bar} />
+                {bars}
             </View>
         );
     }
