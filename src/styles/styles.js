@@ -27,5 +27,17 @@ export const styles = StyleSheet.create({
         color: COLOR_PRIMARY,
         fontWeight: 'bold',
         textAlign: 'center',
+    },
+    shadowBox: {
+        backgroundColor: '#ffffff',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
+        borderRadius: 5,
     }
 });

@@ -159,23 +159,12 @@ class BoxNumberInput extends Component {
                         onBlur={this.props.onBlur}
                         keyboardType='numeric'
                         placeholder={this.props.placeholder}
-                        style={{
+                        style={[styles.shadowBox, {
                             width: 69,
                             paddingVertical: 7,
                             textAlign: 'center',
-                            backgroundColor: '#ffffff',
-                            marginRight: 8,
-                            shadowColor: "#000",
-                            shadowOffset: {
-                                width: 0,
-                                height: 2,
-                            },
-                            shadowOpacity: 0.25,
-                            shadowRadius: 3.84,
-                            elevation: 5,
-                            borderRadius: 5,
-                            color: DARK_GRAY,
-                        }}
+                            marginRight: 8
+                        }]}
                     />
                     <Text style={{
                         color: DARK_GRAY,

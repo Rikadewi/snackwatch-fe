@@ -1,19 +1,30 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { Text, View, StyleSheet } from "react-native";
+import { Button } from "react-native-elements";
+import { logout } from "../actions/auth";
+import { styles } from '../styles/styles'
+class Shop extends Component {
+    render() {
+        const { username, handleLogout } = this.props;
 
-export default function Shop() {
-    return (
-        <View style={styles.container}>
-            <Text>Shop</Text>
-        </View>
-    );
+        return (
+            <View style={styles.container}>
+                <Text>Shop </Text>
+                <Button onPress={handleLogout} title="Logout" />
+            </View>
+        );
+    }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
+const mapStateToProps = state => ({
+    username: state.auth.username
 });
+
+const mapDispatchToProps = dispatch => ({
+    handleLogout: noRekening => {
+        dispatch(logout(noRekening));
+    }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Shop);
