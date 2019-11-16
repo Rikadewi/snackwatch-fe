@@ -35,9 +35,11 @@ export const addIllness = (illness) => {
     };
 };
 
-export const addBio = (name) => {
+export const addBio = (name, username, password) => {
     return {
         type: ADD_BIO,
         name: name,
+        username: username,
+        password: password,
     };
 };

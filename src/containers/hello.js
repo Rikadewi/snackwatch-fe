@@ -27,7 +27,7 @@ export default class Hello extends Component {
                     source={require('../static/hello.png')}
                     style={{
                         width: 220,
-                        height: 250,
+                        height: 226.8,
                     }}
                 />
 

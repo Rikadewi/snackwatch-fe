@@ -6,6 +6,7 @@ import Know from './register/know';
 import Allergy from './register/allergy';
 import Illness from './register/illness';
 import Bio from './register/bio';
+import Ready from './register/ready';
 
 const UserNavigator = createStackNavigator(
     {
@@ -14,6 +15,7 @@ const UserNavigator = createStackNavigator(
         Allergy: { screen: Allergy },
         Illness: { screen: Illness },
         Bio: { screen: Bio },
+        Ready: { screen: Ready },
         Login: { screen: Login },
     },
     {

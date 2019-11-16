@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { addBio } from "../../actions/user";
-import { login } from "../../actions/auth";
 import { Text, View, ScrollView, SafeAreaView } from 'react-native';
 import { styles } from '../../styles/styles'
 import RegisterBar from '../../components/register-bar';
@@ -45,6 +44,7 @@ class Bio extends Component {
     handleSubmit = () => {
         if (this.isFormValid()) {
             this.props.handleAddBio(this.state.name, this.state.username, this.state.password);
+            this.props.navigation.navigate('Ready');
         }
     };
 
@@ -106,8 +106,7 @@ class Bio extends Component {
 
 const mapDispatchToProps = dispatch => ({
     handleAddBio: (name, username, password) => {
-        dispatch(login(username, password))
-        dispatch(addBio(name));
+        dispatch(addBio(name, username, password));
     },
 });
 

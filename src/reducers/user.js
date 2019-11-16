@@ -13,6 +13,8 @@ const initialState = {
     allergy: [],
     illness: [],
     name: '',
+    username: '',
+    password: '',
 };
 
 const user = (state = initialState, action) => {
@@ -39,6 +41,8 @@ const user = (state = initialState, action) => {
             return {
                 ...state,
                 name: action.name,
+                username: action.username,
+                password: action.password,
             };
         default:
             return state;

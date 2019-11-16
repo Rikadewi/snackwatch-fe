@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { addMetric } from "../../actions/user";
-import { TextInput, Text, View, Image, ScrollView, SafeAreaView, TouchableHighlight } from 'react-native';
+import { TextInput, Text, View, Image, ScrollView, SafeAreaView, TouchableOpacity } from 'react-native';
 import { styles } from '../../styles/styles'
 import { H6, DARK_GRAY, BLACK } from '../../styles/const';
 import RegisterBar from '../../components/register-bar';
@@ -82,8 +82,13 @@ class Know extends Component {
                             justifyContent: 'space-between',
                             margin: 25,
                         }}>
-                            <TouchableHighlight
+                            <TouchableOpacity
                                 onPress={() => this.setState({ gender: 1 })}
+                                style={{
+                                    width: 109,
+                                    height: 109,
+                                    borderRadius: 109,
+                                }}
                             >
                                 <Image
                                     source={require('../../static/girl.png')}
@@ -92,9 +97,14 @@ class Know extends Component {
                                         height: 109,
                                     }}
                                 />
-                            </TouchableHighlight>
-                            <TouchableHighlight
+                            </TouchableOpacity>
+                            <TouchableOpacity
                                 onPress={() => this.setState({ gender: 0 })}
+                                style={{
+                                    width: 109,
+                                    height: 109,
+                                    borderRadius: 109,
+                                }}
                             >
                                 <Image
                                     source={require('../../static/man.png')}
@@ -103,7 +113,7 @@ class Know extends Component {
                                         height: 109,
                                     }}
                                 />
-                            </TouchableHighlight>
+                            </TouchableOpacity>
                         </View>
                         <BoxNumberInput
                             handler={this.handleChangeAge}

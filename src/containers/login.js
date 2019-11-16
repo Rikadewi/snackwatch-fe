@@ -55,7 +55,7 @@ class Login extends Component {
                     source={require('../static/background/header-login.png')}
                     style={{
                         width: '100vw',
-                        height: '42vw',
+                        height: '43.68vw',
                     }}
                 />
 

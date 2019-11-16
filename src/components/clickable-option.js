@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image, TouchableHighlight } from 'react-native';
+import { Text, View, Image, TouchableOpacity } from 'react-native';
 import { GREEN, GRAY, BLACK } from '../styles/const';
 
 export default class ClickableOption extends Component {
@@ -39,7 +39,7 @@ class ClickableImage extends Component {
         if (this.props.name == 'No') {
             return (
                 <View style={{ marginBottom: 19 }}>
-                    <TouchableHighlight
+                    <TouchableOpacity
                         onPress={this.props.handle}
                         style={{
                             backgroundColor: GREEN,
@@ -54,7 +54,7 @@ class ClickableImage extends Component {
                             fontSize: 28,
                             lineHeight: 72,
                         }}>{this.props.name}</Text>
-                    </TouchableHighlight>
+                    </TouchableOpacity>
 
                 </View >
             );
@@ -65,7 +65,7 @@ class ClickableImage extends Component {
                     display: 'flex',
                     alignItems: 'center',
                 }}>
-                    <TouchableHighlight
+                    <TouchableOpacity
                         onPress={() => this.props.handle(this.props.name)}
                         style={{
                             backgroundColor: GRAY,
@@ -82,7 +82,7 @@ class ClickableImage extends Component {
                                 height: 43,
                             }}
                         />
-                    </TouchableHighlight>
+                    </TouchableOpacity>
                     <Text style={{
                         color: BLACK,
                         textAlign: 'center',
