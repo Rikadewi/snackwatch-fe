@@ -7,6 +7,7 @@ import Home from "./home";
 import Shop from "./shop";
 import ShopAnalysis from './shop-analysis';
 import Camera from "./camera";
+import CameraAnalysis from './camera-analysis';
 import CameraButton from "../components/camera-button";
 
 const HomeTab = createStackNavigator(
@@ -30,7 +31,8 @@ const ShopTab = createStackNavigator(
 
 const CameraTab = createStackNavigator(
 	{
-		Camera: Camera
+		Camera: Camera,
+		CameraAnalysis: CameraAnalysis,
 	},
 	{
 		headerMode: "none"

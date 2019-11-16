@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Text, TouchableOpacity } from 'react-native';
-import { COLOR_PRIMARY, COLOR_SECONDARY, NARROW_BUTTON } from '../styles/const';
+import { COLOR_PRIMARY, NARROW_BUTTON } from '../styles/const';
 
 export default class NarrowButton extends Component {
     render() {
         return (
             <TouchableOpacity
                 style={{
-                    backgroundColor: this.props.color ? COLOR_SECONDARY : COLOR_PRIMARY,
+                    backgroundColor: this.props.color ? this.props.color : COLOR_PRIMARY,
                     width: NARROW_BUTTON,
                     borderRadius: 5,
                     paddingVertical: 10,
