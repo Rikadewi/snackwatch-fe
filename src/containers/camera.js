@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
+import { Button } from "react-native-elements";
 import * as Permissions from "expo-permissions";
 import { Camera } from "expo-camera";
 
@@ -70,16 +71,16 @@ const CameraShoot = class CameraClass extends React.Component {
 							style={{
 								flex: 1,
 								backgroundColor: "transparent",
-								flexDirection: "row"
+								flexDirection: "row",
+								justifyContent: "center"
 							}}>
 							<TouchableOpacity
 								style={{
 									backgroundColor: "#4b55f8",
-									flex: 0.1,
 									alignSelf: "flex-end",
 									alignItems: "center",
-									width: 300,
-									height: 300
+									width: 50,
+									height: 50
 								}}
 								onPress={this.takePicture}>
 								<Text>Button</Text>
@@ -109,7 +110,6 @@ const CameraShoot = class CameraClass extends React.Component {
 
 	render() {
 		const isFocused = this.props.navigation.isFocused();
-		console.log(this.state);
 		if (isFocused) {
 			return (
 				<View style={{ flex: 1 }}>

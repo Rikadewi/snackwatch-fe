@@ -15,15 +15,18 @@ export const getInfoFromServer = async capturedImageURI => {
 		name: "file.jpg",
 		uri: capturedImageURI
 	});
-	ImageData.append("info", {
-		snack_weight: 55,
-		weight: 45,
-		age: 20,
-		height: 165,
-		gender: 0,
-		allergy: [1, 2, 3],
-		illness: [1, 2, 3, 4]
-	});
+	imgData.append(
+		"info",
+		JSON.stringify({
+			snack_weight: 55,
+			weight: 45,
+			age: 20,
+			height: 165,
+			gender: 0,
+			allergy: [1, 2, 3],
+			illness: [1, 2, 3, 4]
+		})
+	);
 
 	let error;
 	let response = await getInformationAxios
