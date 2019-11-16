@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Text, View, Image, ScrollView, SafeAreaView } from "react-native";
 import { styles } from '../styles/styles';
 import { BLACK } from "../styles/const";
+
 class Home extends Component {
 	render() {
 		return (

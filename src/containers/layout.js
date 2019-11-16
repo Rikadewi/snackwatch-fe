@@ -5,6 +5,7 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 import Home from "./home";
 import Shop from "./shop";
+import ShopAnalysis from './shop-analysis';
 import Camera from "./camera";
 import CameraButton from "../components/camera-button";
 
@@ -19,7 +20,8 @@ const HomeTab = createStackNavigator(
 
 const ShopTab = createStackNavigator(
 	{
-		Shop: Shop
+		Shop: Shop,
+		ShopAnalysis: ShopAnalysis,
 	},
 	{
 		headerMode: "none"
