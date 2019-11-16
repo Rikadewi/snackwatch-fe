@@ -1,7 +1,8 @@
 import {
     ADD_METRIC,
     ADD_ALLERGY,
-    ADD_ILLNESS
+    ADD_ILLNESS,
+    ADD_BIO
 } from "../actions/types";
 
 const initialState = {
@@ -9,8 +10,9 @@ const initialState = {
     age: 0,
     weight: 0,
     height: 0,
-    allergies: [],
+    allergy: [],
     illness: [],
+    name: '',
 };
 
 const user = (state = initialState, action) => {
@@ -26,12 +28,17 @@ const user = (state = initialState, action) => {
         case ADD_ALLERGY:
             return {
                 ...state,
-                allergies: action.allergies,
+                allergy: action.allergy,
             };
         case ADD_ILLNESS:
             return {
                 ...state,
                 illness: action.illness,
+            };
+        case ADD_BIO:
+            return {
+                ...state,
+                name: action.name,
             };
         default:
             return state;

@@ -10,7 +10,7 @@ class Know extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            gender: null,
+            gender: -1,
             age: 0,
             weight: 0,
             height: 0,

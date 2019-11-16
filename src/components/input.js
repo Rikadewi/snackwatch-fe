@@ -6,7 +6,7 @@ import { Icon } from 'react-native-elements'
 export default class Input extends Component {
     render() {
         let input;
-        if (this.props.placeholder == 'Password') {
+        if (this.props.placeholder == 'Password' || this.props.placeholder == 'Confirm Password') {
             input = <TextInput
                 secureTextEntry={true}
                 style={{
@@ -40,11 +40,13 @@ export default class Input extends Component {
                 margin: 10,
             }}
             >
-                <Icon
-                    name={this.props.iconName}
-                    type='feather'
-                    color={DARK_GRAY}
-                    size={20} />
+                {this.props.iconName != '' &&
+                    <Icon
+                        name={this.props.iconName}
+                        type='feather'
+                        color={DARK_GRAY}
+                        size={20} />
+                }
                 {input}
             </View>
         );

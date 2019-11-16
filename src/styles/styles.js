@@ -6,13 +6,15 @@ export const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         alignItems: 'center',
         backgroundColor: BACKGROUND,
-        padding: 11
+        padding: 11,
+        minHeight: '100vh',
     },
     containerFull: {
         flex: 1,
         alignItems: 'center',
         backgroundColor: BACKGROUND,
-        padding: 11
+        padding: 11,
+        minHeight: '100vh',
     },
     h1: {
         fontSize: H1,
