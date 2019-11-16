@@ -11,7 +11,7 @@ class Know extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            gender: '',
+            gender: null,
             age: 0,
             weight: 0,
             height: 0,
@@ -84,7 +84,7 @@ class Know extends Component {
                             margin: 25,
                         }}>
                             <TouchableHighlight
-                                onPress={() => this.setState({ gender: WOMAN })}
+                                onPress={() => this.setState({ gender: 1 })}
                             >
                                 <Image
                                     source={require('../../static/girl.png')}
@@ -95,7 +95,7 @@ class Know extends Component {
                                 />
                             </TouchableHighlight>
                             <TouchableHighlight
-                                onPress={() => this.setState({ gender: MAN })}
+                                onPress={() => this.setState({ gender: 0 })}
                             >
                                 <Image
                                     source={require('../../static/man.png')}
