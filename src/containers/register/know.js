@@ -38,7 +38,7 @@ class Know extends Component {
 
     handleSubmit = () => {
         if (this.isFormValid()) {
-            this.props.handleAddMetric(this.state.gender, this.state.age, this.state.weight);
+            this.props.handleAddMetric(this.state.gender, this.state.age, this.state.weight, this.state.height);
             this.props.navigation.navigate('Allergy');
         }
     };
