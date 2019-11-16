@@ -6,8 +6,8 @@ import {
 
 const initialState = {
 	isAuthenticated: false,
-	username: null,
-	password: null,
+	username: '',
+	password: '',
 };
 
 const auth = (state = initialState, action) => {

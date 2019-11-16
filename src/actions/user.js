@@ -1,6 +1,7 @@
 import {
     ADD_METRIC,
-    ADD_ALLERGY
+    ADD_ALLERGY,
+    ADD_ILLNESS
 } from './types';
 import { addMetricApi } from '../api/user';
 
@@ -19,9 +20,16 @@ export const addMetricSuccess = data => {
     };
 };
 
-export const addAllergy = (allergies) => {
+export const addAllergy = (allergy) => {
     return {
         type: ADD_ALLERGY,
-        allergies: allergies,
+        allergy: allergy,
+    };
+};
+
+export const addIllness = (illness) => {
+    return {
+        type: ADD_ILLNESS,
+        illness: illness,
     };
 };

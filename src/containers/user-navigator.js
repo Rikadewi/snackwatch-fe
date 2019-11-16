@@ -8,10 +8,10 @@ import Illness from './register/illness';
 
 const UserNavigator = createStackNavigator(
     {
+        Illness: { screen: Illness },
         Hello: { screen: Hello },
         Know: { screen: Know },
         Allergy: { screen: Allergy },
-        Illness: { screen: Illness },
         Login: { screen: Login },
     },
     {

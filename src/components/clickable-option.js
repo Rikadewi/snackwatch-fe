@@ -22,7 +22,7 @@ export default class ClickableOption extends Component {
                 flexDirection: 'row',
                 flexWrap: 'wrap',
                 justifyContent: 'space-between',
-                width: 261,
+                width: 276,
             }}>
                 {options}
                 <ClickableImage handle={this.props.handleSubmit.bind(this)} name="No" path={this.props.path} />
@@ -60,7 +60,11 @@ class ClickableImage extends Component {
             );
         } else {
             return (
-                <View style={{ marginBottom: 19 }}>
+                <View style={{
+                    marginBottom: 19,
+                    display: 'flex',
+                    alignItems: 'center',
+                }}>
                     <TouchableHighlight
                         onPress={() => this.props.handle(this.props.name)}
                         style={{
@@ -68,6 +72,7 @@ class ClickableImage extends Component {
                             paddingHorizontal: 14.5,
                             paddingVertical: 14.5,
                             borderRadius: 72,
+                            width: 72,
                         }}
                     >
                         <Image
@@ -82,6 +87,7 @@ class ClickableImage extends Component {
                         color: BLACK,
                         textAlign: 'center',
                         marginTop: 2,
+                        width: 92,
                     }}>{this.props.name}</Text>
                 </View>
             );
