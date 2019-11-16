@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Text, View, Image, ScrollView, SafeAreaView } from "react-native";
-import { styles } from '../styles/styles'
+import { styles } from '../styles/styles';
 import { BLACK } from "../styles/const";
 class Home extends Component {
 	render() {
@@ -85,7 +85,6 @@ class BoxImage extends Component {
 			}]}>
 
 				<Image
-					// source={require('../static/activity/Bicycle.png')}
 					source={require('../static/activity' + this.props.path + '.png')}
 					style={{
 						width: 85,

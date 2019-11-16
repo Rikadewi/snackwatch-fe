@@ -39,7 +39,7 @@ const Layout = createBottomTabNavigator(
 	{
 		Home: { screen: HomeTab },
 		Camera: { screen: CameraTab },
-		Shop: { screen: ShopTab }
+		Shop: { screen: ShopTab },
 	},
 	{
 		defaultNavigationOptions: ({ navigation }) => ({
