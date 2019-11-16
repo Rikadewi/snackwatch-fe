@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getInformationAxios = axios.create({
 	// baseURL: "http://18.140.127.175:9001",
-	baseURL: "http://192.168.43.136:9001",
+	baseURL: "http://172.16.1.234:3000",
 	headers: {
 		"Content-Type": "multipart/form-data"
 	}
@@ -15,16 +15,25 @@ export const getInfoFromServer = async capturedImageURI => {
 		name: "file.jpg",
 		uri: capturedImageURI
 	});
+	ImageData.append("info", {
+		snack_weight: 55,
+		weight: 45,
+		age: 20,
+		height: 165,
+		gender: 0,
+		allergy: [1, 2, 3],
+		illness: [1, 2, 3, 4]
+	});
 
 	let error;
 	let response = await getInformationAxios
-		.post("/nutritionExtract/", imgData)
+		.post("/image_info/", imgData)
 		.catch(err => {
 			error = err;
 			console.log("Error:", err);
 		});
 	return new Promise((resolve, reject) => {
-		if (!information) {
+		if (!response) {
 			reject(error);
 		}
 		resolve(response.request._response);
