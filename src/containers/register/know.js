@@ -39,11 +39,8 @@ class Know extends Component {
 
     handleSubmit = () => {
         if (this.isFormValid()) {
-            console.log("tes");
             this.props.handleAddMetric(this.state.gender, this.state.age, this.state.weight);
-            console.log(this.state.gender)
-            console.log(this.state.age)
-            console.log(this.state.weight)
+            this.props.navigation.navigate('Allergy');
         }
     };
 
@@ -64,7 +61,7 @@ class Know extends Component {
             <SafeAreaView style={{ flex: 1 }}>
                 <ScrollView>
                     <View style={styles.containerFull} >
-                        <RegisterBar />
+                        <RegisterBar count={1} />
                         <Text style={styles.h1}>Get to Know {"\n"}
                             You Better</Text>
                         <Text style={{

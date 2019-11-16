@@ -1,5 +1,6 @@
 import {
-    ADD_METRIC
+    ADD_METRIC,
+    ADD_ALLERGY
 } from './types';
 import { addMetricApi } from '../api/user';
 
@@ -15,5 +16,12 @@ export const addMetricSuccess = data => {
         age: data.age,
         weight: data.weight,
         height: data.height,
+    };
+};
+
+export const addAllergy = (allergies) => {
+    return {
+        type: ADD_ALLERGY,
+        allergies: allergies,
     };
 };
