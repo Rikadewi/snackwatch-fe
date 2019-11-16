@@ -4,6 +4,7 @@ import {
 
 const initialState = {
     gender: null,
+    age: null,
     weight: null,
     height: null,
 };
@@ -14,6 +15,7 @@ const user = (state = initialState, action) => {
             return {
                 ...state,
                 gender: action.gender,
+                age: action.age,
                 weight: action.weight,
                 height: action.height,
             };

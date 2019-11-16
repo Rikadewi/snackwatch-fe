@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { login } from "../actions/auth";
 import { Text, View, Image } from 'react-native';
-import { Button } from 'react-native-elements';
 import { COLOR_PRIMARY, COLOR_SECONDARY, H2 } from '../styles/const'
 import Input from '../components/input';
 import Logo from '../components/logo';

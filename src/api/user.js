@@ -11,9 +11,10 @@ export const logoutApi = (username) => {
     };
 };
 
-export const addMetricApi = (gender, weight, height) => {
+export const addMetricApi = (gender, age, weight, height) => {
     return {
         gender: gender,
+        age: age,
         weight: weight,
         height: height,
     };
