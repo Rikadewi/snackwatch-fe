@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
-import { Button } from 'react-native-elements';
+import { Text, TouchableOpacity } from 'react-native';
 import { COLOR_PRIMARY, WIDE_BUTTON } from '../styles/const';
-import { BorderlessButton } from 'react-native-gesture-handler';
 
 export default class BlueButton extends Component {
     render() {
