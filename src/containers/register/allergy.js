@@ -33,21 +33,14 @@ class Allergy extends Component {
                 <ScrollView>
                     <View style={styles.containerFull} >
                         <RegisterBar count={2} />
-                        <Text style={styles.h1}>Do you have any type {"\n"}
+                        <Text style={styles.h2}>Do you have any type {"\n"}
                             of food allergy?</Text>
+                        <View style={{
+                            margin: 30,
+                        }}>
+                            <ClickableImage handle={this.handleChangeAllergy} />
+                        </View>
 
-
-                        <TouchableHighlight
-                            onPress={this.handleChangeAllergy}
-                        >
-                            <Image
-                                source={require('../../static/girl.png')}
-                                style={{
-                                    width: 109,
-                                    height: 109,
-                                }}
-                            />
-                        </TouchableHighlight>
                     </View>
                 </ScrollView>
             </SafeAreaView >
@@ -58,17 +51,30 @@ class Allergy extends Component {
 class ClickableImage extends Component {
     render() {
         return (
-            <TouchableHighlight
-                onPress={this.props.onPress}
-            >
-                <Image
-                    source={require('../../static/girl.png')}
+            <View>
+                <TouchableHighlight
+                    onPress={this.handle}
                     style={{
-                        width: 109,
-                        height: 109,
+                        backgroundColor: GRAY,
+                        paddingHorizontal: 14.5,
+                        paddingVertical: 14.5,
+                        borderRadius: 72,
                     }}
-                />
-            </TouchableHighlight>
+                >
+                    <Image
+                        source={require('../../static/allergy/Egg.png')}
+                        style={{
+                            width: 43,
+                            height: 43,
+                        }}
+                    />
+                </TouchableHighlight>
+                <Text style={{
+                    color: BLACK,
+                    textAlign: 'center',
+                    marginTop: 2,
+                }}>Egg</Text>
+            </View>
         );
     }
 }
