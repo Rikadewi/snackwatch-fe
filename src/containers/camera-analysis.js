@@ -16,29 +16,30 @@ import NarrowButton from "../components/narrow-button";
 
 class CameraAnalysis extends Component {
 	render() {
-		let response = {
-			"items": [
-				{
-					"Carbohydrate": {
-						"amount": 23.1,
-						"status": 2,
-					},
-				},
-				{
-					"Protein": {
-						"amount": 3,
-						"status": 1,
-					},
-				},
-				{
-					"Fats": {
-						"amount": 9.35,
-						"status": 3,
-					},
-				},
-			],
-			"verdict": 1,
-		};
+		let response = this.props.response;
+		// let response = {
+		// 	"items": [
+		// 		{
+		// 			"Carbohydrate": {
+		// 				"amount": 23.1,
+		// 				"status": 2,
+		// 			},
+		// 		},
+		// 		{
+		// 			"Protein": {
+		// 				"amount": 3,
+		// 				"status": 1,
+		// 			},
+		// 		},
+		// 		{
+		// 			"Fats": {
+		// 				"amount": 9.35,
+		// 				"status": 3,
+		// 			},
+		// 		},
+		// 	],
+		// 	"verdict": 1,
+		// };
 		let items = [];
 		for (let i = 0; i < response.items.length; i++) {
 			let key = Object.keys(response.items[i]);
@@ -175,7 +176,7 @@ class CameraAnalysis extends Component {
 }
 
 const mapStateToProps = state => ({
-	username: state.auth.username
+	response: state.nutrition.response
 });
 
 export default connect(mapStateToProps, null)(CameraAnalysis);

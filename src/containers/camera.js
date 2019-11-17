@@ -39,6 +39,7 @@ const CameraShoot = class CameraClass extends React.Component {
 			this.setState({ path: data.uri, image: data });
 			// this.props.updateImage(data.uri);
 			// console.log('Path to image: ' + data.uri);
+			this.props.handleResponse(resp);
 			this.props.navigation.navigate('CameraAnalysis');
 		} catch (err) {
 			console.log("err: ", err);
@@ -138,7 +139,13 @@ const styles = StyleSheet.create({
 	}
 });
 
-export default CameraShoot;
+const mapDispatchToProps = dispatch => ({
+	handleResponse: (response) => {
+		dispatch(handleResponse(response));
+	}
+});
+
+export default connect(null, mapDispatchToProps)(CameraShoot);
 
 {
 	/* <TouchableOpacity

@@ -13,7 +13,8 @@ export const styles = StyleSheet.create({
 		flex: 1,
 		alignItems: "center",
 		backgroundColor: BACKGROUND,
-		padding: 11
+		padding: 11,
+		// height: '100%',
 		// minHeight: "100vh"
 	},
 	h1: {
