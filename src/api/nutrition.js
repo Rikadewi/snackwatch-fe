@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export const getInformationAxios = axios.create({
-	// baseURL: "http://18.140.127.175:9001",
-	baseURL: "http://172.16.1.234:3000",
+	baseURL: "http://18.140.187.242:3000",
+	// baseURL: "http://172.16.1.234:3000",
 	headers: {
 		"Content-Type": "multipart/form-data"
 	}
@@ -39,6 +39,7 @@ export const getInfoFromServer = async capturedImageURI => {
 		if (!response) {
 			reject(error);
 		}
-		resolve(response.request._response);
+		resolve(JSON.parse(response.request._response));
+
 	});
 };

@@ -6,6 +6,7 @@ import { styles } from '../../styles/styles'
 import RegisterBar from '../../components/register-bar';
 import Input from '../../components/input';
 import NarrowButton from '../../components/narrow-button';
+import { BACKGROUND } from '../../styles/const';
 
 class Bio extends Component {
     constructor(props) {
@@ -67,7 +68,7 @@ class Bio extends Component {
 
     render() {
         return (
-            <SafeAreaView style={{ flex: 1 }}>
+            <SafeAreaView style={{ flex: 1, backgroundColor: BACKGROUND }}>
                 <ScrollView>
                     <View style={styles.containerFull} >
                         <RegisterBar count={4} />

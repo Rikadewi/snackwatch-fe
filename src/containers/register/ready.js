@@ -48,9 +48,9 @@ class Ready extends Component {
 					source={require("../../static/background/footer-register.png")}
 					style={{
 						position: "absolute",
-						bottom: 0
-						// width: "100vw",
-						// height: "78vw"
+						// bottom: 0,
+						// width: "100%",
+						// height: 280,
 					}}
 				/>
 			</TouchableOpacity>

@@ -7,6 +7,7 @@ export const DARK_GRAY = '#858585';
 export const BLACK = '#707070';
 export const GREEN = '#0fd9c1';
 export const RED = '#ff2a00';
+export const YELLOW = '#ffda83';
 export const WIDE_BUTTON = 283;
 export const NARROW_BUTTON = 136;
 export const H1 = 36;

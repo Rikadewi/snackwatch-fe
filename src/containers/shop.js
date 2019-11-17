@@ -2,11 +2,19 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Text, TextInput, View, Image, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView, Picker } from "react-native";
 import { styles } from '../styles/styles';
-import { BLACK, H6, GRAY, RED, COLOR_SECONDARY, COLOR_PRIMARY } from "../styles/const";
+import { BLACK, H6, GRAY, RED, COLOR_SECONDARY, COLOR_PRIMARY, GREEN } from "../styles/const";
 import { Icon } from "react-native-elements";
 import NarrowButton from '../components/narrow-button';
 
 class Shop extends Component {
+    constructor(props) {
+        super(props);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit = () => {
+        this.props.navigation.navigate('ShopAnalysis');
+    }
     render() {
         return (
             <SafeAreaView style={[styles.containerFull, {
@@ -62,7 +70,7 @@ class Shop extends Component {
                         <Product />
                         <NarrowButton
                             onPress={this.handleSubmit}
-                            color={true}
+                            color={GREEN}
                             text="Analyze" />
                     </View>
                 </ScrollView>

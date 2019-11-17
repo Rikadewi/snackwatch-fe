@@ -39,6 +39,7 @@ const CameraShoot = class CameraClass extends React.Component {
 			this.setState({ path: data.uri, image: data });
 			// this.props.updateImage(data.uri);
 			// console.log('Path to image: ' + data.uri);
+			this.props.navigation.navigate('CameraAnalysis');
 		} catch (err) {
 			console.log("err: ", err);
 		}
@@ -166,3 +167,4 @@ onPress={() => {
 </Text>
 </TouchableOpacity> */
 }
+
